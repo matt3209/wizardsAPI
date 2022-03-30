@@ -10,40 +10,50 @@ public class Wizards {
     private Integer id;
 
     @Column
-    private String name;
+    private String region;
 
     @Column
-    private String profession;
+    private Integer level;
 
     @Column
     private Integer str;
 
     @Column
-    private Integer dex;
+    private Integer speed;
 
     @Column
     private Integer intel;
 
     @Column
-    private Integer wis;
+    private Integer stamina;
 
     @Column
-    private Integer chari;
+    private Integer spells;
 
     @Column
-    private String spec;
+    private String type;
+
+    @Column
+    private String name;
+
+    @Column
+    private String profession;
 
     public Wizards() {}
 
-    public Wizards(Integer id, String name, String profession, Integer str, Integer dex, Integer wis, Integer chari, String spec) {
+
+
+    public Wizards(Integer id, String region, Integer level, String  name, String profession, Integer str, Integer speed, Integer stamina, Integer spells, String type) {
         this.id = id;
+        this.region = region;
+        this.level = level;
+        this.str = str;
+        this.speed = speed;
+        this.stamina = stamina;
+        this.spells = spells;
+        this.type = type;
         this.name = name;
         this.profession = profession;
-        this.str = str;
-        this.dex = dex;
-        this.wis = wis;
-        this.chari = chari;
-        this.spec = spec;
     }
 
     public int getId() {
@@ -74,44 +84,59 @@ public class Wizards {
         this.str = str;
     }
 
-    public int getDex() {
-        return dex;
+    public int getSpeed() {
+        return speed;
     }
 
-    public void setDex(int dex) {
-        this.dex = dex;
+    public void setSpeed(int speed) {
+        this.speed = speed;
     }
 
-    public int getWis() {
-        return wis;
+    public int getStamina() {
+        return stamina;
     }
 
-    public void setWis(int wis) {
-        this.wis = wis;
+    public void setStamina(int stamina) {
+        this.stamina = stamina;
     }
 
-    public int getChari() {
-        return chari;
+    public int getSpells() {
+        return spells;
     }
 
-    public void setChari(int chari) {
-        this.chari = chari;
+    public void setSpells(int spells) {
+        this.spells = spells;
     }
 
-    public String getSpec() {
-        return spec;
+    public String getType() {
+        return type;
     }
 
-    public void setSpec(String spec) {
-        this.spec = spec;
+    public void setType(String spec) {
+        this.type = spec;
     }
 
     public int getIntel() {
         return intel;
     }
 
-    public void getIntel(int intel) {
+    public void setIntel(int intel) {
         this.intel = intel;
+    }
+    public String getRegion() {
+        return region;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    public Integer getLevel() {
+        return level;
+    }
+
+    public void setLevel(Integer level) {
+        this.level = level;
     }
 
 }

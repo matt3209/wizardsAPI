@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class WizardsController {
@@ -25,6 +26,8 @@ public class WizardsController {
     public Wizards getWizardsById(@PathVariable Integer id){
         return wizardService.getWizardById(id);
     }
+    @PutMapping("/wizards/{id}")
+    public Optional<Wizards> updateWizardByID(@RequestBody Wizards newWizard, @PathVariable Integer id) { return wizardService.updateWizardById(id, newWizard);}
 
 
 }
