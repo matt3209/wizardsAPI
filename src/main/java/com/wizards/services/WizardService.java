@@ -34,9 +34,14 @@ public class WizardService {
             wizard.setIntel(newWizard.getIntel());
             wizard.setType(newWizard.getType());
             wizard.setLevel(newWizard.getLevel());
-            wizard.setRegion(newWizard.getRegion());
+            wizard.setQuestXP(newWizard.getQuestXP());
+            wizard.setQuestEnd(newWizard.getQuestEnd());
+            wizard.setQuestStart(newWizard.getQuestStart());
+            wizard.setOnQuest(newWizard.getOnQuest());
+            wizard.setUsedxp(newWizard.getUsedxp());
+            wizard.setXp(newWizard.getXp());
             wizard.setName(newWizard.getName());
-            wizard.setRegion(newWizard.getRegion());
+            wizard.setProfession(newWizard.getProfession());
             return wizRepo.save(wizard);
         });
     }

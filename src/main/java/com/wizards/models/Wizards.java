@@ -39,11 +39,33 @@ public class Wizards {
     @Column
     private String profession;
 
+    @Column
+    private Integer xp;
+
+    @Column
+    private Integer usedxp;
+
+    @Column
+    private Integer onquest;
+
+    @Column
+    private Integer queststart;
+
+    @Column
+    private Integer questend;
+
+    @Column
+    private Integer questxp;
+
+    @Column
+    private String spelllist;
+
+
     public Wizards() {}
 
 
 
-    public Wizards(Integer id, String region, Integer level, String  name, String profession, Integer str, Integer speed, Integer stamina, Integer spells, String type) {
+    public Wizards(Integer id, String region, Integer level, String  name, String profession, Integer str, Integer speed, Integer stamina, Integer spells, String type, Integer queststart, Integer questend, Integer questxp, Integer onquest, Integer usedxp, Integer xp, String spelllist) {
         this.id = id;
         this.region = region;
         this.level = level;
@@ -54,6 +76,13 @@ public class Wizards {
         this.type = type;
         this.name = name;
         this.profession = profession;
+        this.xp = xp;
+        this.usedxp = usedxp;
+        this.onquest = onquest;
+        this.queststart = queststart;
+        this.questend = questend;
+        this.questxp = questxp;
+        this.spelllist = spelllist;
     }
 
     public int getId() {
@@ -123,6 +152,7 @@ public class Wizards {
     public void setIntel(int intel) {
         this.intel = intel;
     }
+
     public String getRegion() {
         return region;
     }
@@ -139,4 +169,57 @@ public class Wizards {
         this.level = level;
     }
 
+    public Integer getQuestXP() {
+        return questxp;
+    }
+
+    public void setQuestXP(Integer questxp) {
+        this.questxp = questxp;
+    }
+
+    public Integer getQuestEnd() {
+        return questend;
+    }
+
+    public void setQuestEnd(Integer questend) {
+        this.questend = questend;
+    }
+
+    public Integer getQuestStart() {  return queststart;   }
+
+    public void setQuestStart(Integer queststart) {
+        this.queststart = queststart;
+    }
+
+    public Integer getOnQuest() {
+        return onquest;
+    }
+
+    public void setOnQuest(Integer onquest) {
+        this.onquest = onquest;
+    }
+
+    public Integer getUsedxp() {
+        return usedxp;
+    }
+
+    public void setUsedxp(Integer usedxp) {
+        this.usedxp = usedxp;
+    }
+
+    public Integer getXp() {
+        return xp;
+    }
+
+    public void setXp(Integer xp) {
+        this.xp = xp;
+    }
+
+    public String getSpellList() {
+        return spelllist;
+    }
+
+    public void setSpellList(String spelllist) {
+        this.spelllist = spelllist;
+    }
 }
